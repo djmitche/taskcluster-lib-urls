@@ -256,7 +256,9 @@ Once that's done, build the Python sdists (only possible by the [maintainers on 
 
 ```sh
 rm -rf dist/*
+pip install -U wheel
 python setup.py sdist bdist_wheel
+pip3 install -U wheel
 python3 setup.py bdist_wheel
 pip install twine
 twine upload dist/*
